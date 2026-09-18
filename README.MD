@@ -6,20 +6,21 @@
 
 ## Requirements
 
-Java: 21
-Framework: Spring Boot (Maven)
-Dependencies: Spring Web, Lombok, Spring Boot DevTools, Spring AI (OpenAI), OpenAI API key
+* Java: 21
+* Framework: Spring Boot (Maven)
+* Dependencies: Spring Web, Lombok, Spring Boot DevTools, Spring AI (OpenAI), OpenAI API key
 
 ---
 
 ## Project Structure
+```text
 src/main/java/sg/edu/ntu/taskflow_api/
 ├── controller/   # Endpoint
 ├── model/        # Task entity
 ├── repository/   # In-memory data store and CRUD operations
 └── service/      # business logic layer
 
-Endpoints: http://localhost:8080/api/tasks
+* Endpoints: http://localhost:8080/api/tasks
 
 ---
 
