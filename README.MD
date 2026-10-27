@@ -1,3 +1,19 @@
+## Module 4 Deployment
+
+### Live Application URL
+https://sctp-aie-backend-production.up.railway.app/api/tasks
+
+### Railway Dashboard
+![Initial-Load](TestScreenshot/railway_dashboard.png)
+
+### Live URL
+![Initial-Load](TestScreenshot/live-url.png)
+
+### Notes
+- Built with Docker multi-stage build (Maven build stage + Alpine JRE runtime stage)
+- OPENAI_API_KEY set as a Railway environment variable (not committed to code)
+
+
 # TaskFlow API - Module 3 Assignment
 
 **Task management API**
