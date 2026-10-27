@@ -1,4 +1,4 @@
-## TaskFlow API - Module 4 Deployment
+# TaskFlow API - Module 4 Deployment
 
 ### Live Application URL
 https://sctp-aie-backend-production.up.railway.app/api/tasks
@@ -9,18 +9,23 @@ https://sctp-aie-backend-production.up.railway.app/api/tasks
 ### Live URL
 ![Initial-Load](TestScreenshot/live_url.png)
 
-### Notes
-- Built with Docker multi-stage build (Maven build stage + Alpine JRE runtime stage)
-- OPENAI_API_KEY set as a Railway environment variable (not committed to code)
+## Errors and failures
+None
 
+## Stretch Goal (optional)
+Stretch goal: None
+Links: none
+Notes: None
 
-# TaskFlow API - Module 3 Assignment
+## Getting started
+
+### TaskFlow API - Module 3 Assignment
 
 **Task management API**
 
 ---
 
-## Requirements
+### Requirements
 
 * Java: 21
 * Framework: Spring Boot (Maven)
@@ -28,7 +33,7 @@ https://sctp-aie-backend-production.up.railway.app/api/tasks
 
 ---
 
-## Project Structure
+### Project Structure
 ```text
 src/main/java/sg/edu/ntu/taskflow_api/
 ├── controller/   # Endpoint
