@@ -25,6 +25,13 @@ public class TaskService {
     }
 
     public Task createTask(Task task) {
+        // Apply defaults when the client omits optional fields
+        if (task.getStatus() == null || task.getStatus().isBlank()) {
+            task.setStatus("todo");
+        }
+        if (task.getPriority() == null || task.getPriority().isBlank()) {
+            task.setPriority("low");
+        }
         return taskRepository.save(task);
     }
 
@@ -32,7 +39,9 @@ public class TaskService {
         Task existingTask = findTaskById(id);
         if (existingTask != null) {
             existingTask.setTitle(taskDetails.getTitle());
-            existingTask.setCompleted(taskDetails.isCompleted());
+            existingTask.setDescription(taskDetails.getDescription());
+            existingTask.setStatus(taskDetails.getStatus());
+            existingTask.setPriority(taskDetails.getPriority());
             return taskRepository.save(existingTask);
         }
         return null;
@@ -42,10 +51,11 @@ public class TaskService {
         taskRepository.delete(id);
     }
 
+    /** Sets a task's status to "done" — matches the frontend's status-based model. */
     public Task markTaskAsComplete(Long id) {
         Task task = findTaskById(id);
         if (task != null) {
-            task.setCompleted(true);
+            task.setStatus("done");
             return taskRepository.save(task);
         }
         return null;

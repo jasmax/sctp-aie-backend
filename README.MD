@@ -17,7 +17,7 @@
 src/main/java/sg/edu/ntu/taskflow_api/
 ├── controller/   # Endpoint
 ├── model/        # Task entity
-├── repository/   # In-memory data store and CRUD operations
+├── repository/   # In-memory data and CRUD
 └── service/      # business logic layer
 ```
 * Endpoints: http://localhost:8080/api/tasks

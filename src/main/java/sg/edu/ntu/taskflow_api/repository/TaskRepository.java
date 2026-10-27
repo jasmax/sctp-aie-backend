@@ -37,13 +37,13 @@ public class TaskRepository {
         taskMap.remove(id);
     }
 
-    // Batch mark tasks as complete
+    // Batch mark tasks as complete (status → "done")
     public List<Task> batchComplete(List<Long> ids) {
         List<Task> updatedTasks = new ArrayList<>();
         for (Long id : ids) {
             Task task = taskMap.get(id);
             if (task != null) {
-                task.setCompleted(true);
+                task.setStatus("done");
                 updatedTasks.add(task);
             }
         }

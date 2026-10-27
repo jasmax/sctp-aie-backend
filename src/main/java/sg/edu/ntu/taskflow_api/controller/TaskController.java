@@ -84,7 +84,9 @@ public class TaskController {
             String tasksJson = objectMapper.writeValueAsString(tasks);
 
             String prompt = "Here is my current task list in JSON format: " + tasksJson +
-                            ". Please give me a short, plain-English summary of what is pending and what is done.";
+                            ". Each task has a title, description, status (todo | in-progress | done), and priority (low | medium | high). " +
+                            "Please give me a concise plain-English summary: how many tasks are in each status, " +
+                            "highlight any high-priority items that are not done yet, and note any tasks that are completed.";
 
             String response = chatClient.prompt()
                     .user(prompt)
